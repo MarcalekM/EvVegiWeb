@@ -2,8 +2,8 @@ Table users {
   id integer [primary key]
   username varchar [unique, not null]
   password_hash varchar [not null]
-  role varchar [default: 'player']     //másik lehetődég: admin     
-  highest_score integer [default: 0]       
+  role_id integer     
+     
   created_at timestamp
   profile_image_url varchar                 
 }
@@ -12,20 +12,17 @@ Table rounds {
   id integer [primary key]
   user_id integer
   score integer [not null]
-  match_date timestamp
+  match_date datetime
 }
 
-Table leaderboard {
-  user_id integer
-  username varchar
-  highest_score integer
-}
+
 
 Table friends {
   id integer [primary key]
   user_id integer
   friend_id integer
-  created_at timestamp
+  friends_since datetime
+  messages_id integer
 }
 
 Table messages {
@@ -36,9 +33,14 @@ Table messages {
   sent_at timestamp
 }
 
+Table roles {
+  id integer [primary key]
+  role_name varchar
+}
+
 Ref: rounds.user_id > users.id
-Ref: leaderboard.user_id > users.id
+
 Ref: friends.user_id > users.id
 Ref: friends.friend_id > users.id
-Ref: messages.sender_id > users.id
-Ref: messages.receiver_id > users.id
+Ref: friends.messages_id < messages.id
+ref: users.role_id > roles.id
