@@ -3,7 +3,7 @@ Table users {
   username varchar [unique, not null]
   password_hash varchar [not null]
   role_id integer     
-     
+  online_status boolean
   created_at timestamp
   profile_image_url varchar                 
 }
@@ -12,10 +12,10 @@ Table rounds {
   id integer [primary key]
   user_id integer
   score integer [not null]
+  round_time integer
+  wave_completed integer
   match_date datetime
 }
-
-
 
 Table friends {
   id integer [primary key]
@@ -39,7 +39,6 @@ Table roles {
 }
 
 Ref: rounds.user_id > users.id
-
 Ref: friends.user_id > users.id
 Ref: friends.friend_id > users.id
 Ref: friends.messages_id < messages.id
