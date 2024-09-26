@@ -1,5 +1,6 @@
 function CardChange(event){
     const btn = event.target.innerHTML;
+    //event.target.classList.add("disabled");
     let anim1 = null;
     let anim2 = null;
     const cardL = document.getElementById("leftCard");
@@ -14,18 +15,18 @@ function CardChange(event){
             switch(btn){
                 case "Home":
                     document.getElementById("leftCard").innerHTML = "<p>Ez a Home leftCard</p>";
-                    document.getElementById("centerCard").innerHTML = "<p>Ez a Home centerCard</p>";
+                    document.getElementById("centerCard").innerHTML = "<p>Üdvözöllek az oldalunkon!</p>";
                     document.getElementById("rightCard").innerHTML = "<p>Ez a Home rightCard</p>";
                     break;
                 case "Leaderboard":
                     document.getElementById("leftCard").innerHTML = "<p>Ez a Leaderboard leftCard</p>";
-                    document.getElementById("centerCard").innerHTML = "<p>Ez a Leaderboard centerCard</p>";
-                    document.getElementById("rightCard").innerHTML = "<p>Ez a Leaderboard rightCard</p>";
+                    document.getElementById("centerCard").innerHTML = '<img src="/img/Kep2.jpg" alt="">';
+                    document.getElementById("rightCard").innerHTML = "<table><hr><td>Név</td><td>Eredmémy</td></hr><tr><td>Koczka Balázs</td><td>1024</td></tr><tr><td>Vízi Adrián</td><td>528</td></td></table>";
                     break;
                 case "About us":
                     document.getElementById("leftCard").innerHTML = "<p>Ez a About us leftCard</p>";
                     document.getElementById("centerCard").innerHTML = "<p>Ez a About us centerCard</p>";
-                    document.getElementById("rightCard").innerHTML = "<p>Ez a About us rightCard</p>";
+                    document.getElementById("rightCard").innerHTML = "<h3>Telefon:</h3><p>+4741742584</p><h3>Email: </h3><p>vmi@gmail.to</p><br><h3>Telephely: </h3><p>Meseország</p>";
                     break;
             }
 
@@ -40,7 +41,7 @@ function CardChange(event){
                     cardR.style.right = posO + "px";
                     cardC.style.top = posC * 2 + "px";
                 }
-            }, 5);
+            }, 0.5);
         }
         else {
             posC--;
@@ -49,7 +50,7 @@ function CardChange(event){
             cardR.style.right = posO + "px";
             cardC.style.top = posC * 2 + "px";
         }
-    }, 5);
+    }, 0.5);
 }
 
 function Hi() {

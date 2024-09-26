@@ -19,8 +19,8 @@ body {
 
 .container {
     height: 850px;
-    width: 90%;
-    background-color: /*#331D2C*/ black;
+    width: 95%;
+    background-color: #331D2C /*black*/;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -40,13 +40,29 @@ body {
 
 .card p {
     width: 95%;
-    height: 90%;
+    height: 80%;
     padding: 10px;
     margin: auto;
     text-align: justify;
     color: #EFE1D1;
-    border-radius: 3%;
     /*overflow: scroll;*/
+}
+
+.card h3{
+    color: #EFE1D1;
+    padding: 10px;
+}
+
+.card table {
+    color:#EFE1D1;
+    border: #EFE1D1 1px solid;
+    padding: 10px;
+}
+
+img {
+    width: auto;
+    height: auto;
+    margin: 5px;
 }
 
 #centerCard {
@@ -83,3 +99,4 @@ body {
     from {right: 0px}
     to {right: -450px}
 }*/
+
