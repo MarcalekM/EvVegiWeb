@@ -52,6 +52,11 @@ function CardChange(event){
     }, 5);
 }
 
-function Hi(){
-    console.log("Hello");   
+function Hi() {
+    const link = document.createElement('a');
+    link.href = 'src/download.txt'; // a letölteni kívánt fájl elérhetősége
+    link.download = 'src/download.txt'; // a letöltött fájl neve
+    document.body.appendChild(link); // a linket a dokumentumhoz adjuk
+    link.click(); // a letöltés elindítása
+    document.body.removeChild(link); // a link eltávolítása a DOM-ból
 }
