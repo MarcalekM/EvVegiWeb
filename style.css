@@ -3,32 +3,82 @@
     padding: 0;
 }
 
+header {
+    background-color: #331D2C;
+    padding: 5px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
 body {
-    background-color: rgb(63, 62, 62);
+    background-color: #331D2C;
 }
 
 .container {
-    height: 800px;
+    height: 850px;
     width: fit-content;
-    background-color: rgb(47, 13, 141);
+    background-color: #331D2C;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    overflow: hidden;
 }
 
 .card {
-    width: 28%;
+    width: 30%;
     max-height: 85%;
-    margin: 4% 2%;
-    background-color: grey;
+    margin: 4% 0;
+    background-color: #3F2E3E;
 }
 
 .card p {
     width: 95%;
     height: 90%;
+    padding: 10px;
     margin: auto;
     text-align: justify;
-    background-color: grey;
-    color: white;
+    background-color: #3F2E3E;
+    color: #EFE1D1;
+    border-radius: 3%;
+    /*overflow: scroll;*/
 }
+
+#centerCard {
+    position: relative;
+    animation-name: tryC;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+#leftCard {
+    position: relative;
+    animation-name: tryL;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+#rightCard {
+    position: relative;
+    animation-name: tryR;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+/*@keyframes tryC {
+    from {top: 0px}
+    to {top: -900px}
+}
+
+@keyframes tryL {
+    from {left: 0px}
+    to {left: -450px}
+}
+
+@keyframes tryR {
+    from {right: 0px}
+    to {right: -450px}
+}*/

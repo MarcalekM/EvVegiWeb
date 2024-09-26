@@ -22,32 +22,22 @@
     <body>
         <header>
             <!-- Nav tabs -->
-            <ul
-                class="nav nav-tabs"
-                id="navId"
-                role="tablist"
-            >
+            <ul class="nav" id="navId" role="tablist">
                 <li>
-                    <button type="button" class="btn btn-light">Home</button>
+                    <button type="button" class="btn btn-light" onclick="CardChange()">Home</button>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-light">Leaderboard</button>
+                    <button class="btn btn-light" onclick="CardChange()">Leaderboard</button>
                 </li>
                 <li>
-                    <button type="button" class="btn btn-light">About us</button>
+                    <button class="btn btn-light" onclick="CardChange()">About us</button>
+                </li>
+                <li>
+                    <button class="btn btn-light" onclick="Hi()">Download</button>
                 </li>
             </ul>
             
-            <!-- Tab panes -->
-            <div class="tab-content" id="myTabContent">
-                <div class="tab-pane fade show active" id="tab1Id" role="tabpanel">
-                    
-                </div>
-                <div class="tab-pane fade" id="tab2Id" role="tabpanel"></div>
-                <div class="tab-pane fade" id="tab3Id" role="tabpanel"></div>
-                <div class="tab-pane fade" id="tab4Id" role="tabpanel"></div>
-                <div class="tab-pane fade" id="tab5Id" role="tabpanel"></div>
-            </div>
+            
             
             <!-- (Optional) - Place this js code after initializing bootstrap.min.js or bootstrap.bundle.min.js -->
             <script>
@@ -58,13 +48,13 @@
         </header>
         <main>
             <div class="container">
-                <div class="card">
+                <div class="card" id="leftCard">
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex dolorem sunt ipsa suscipit culpa. Corrupti hic modi nulla nostrum laborum pariatur fugiat, quae quia! Fugiat libero corporis culpa consequatur dignissimos sequi aspernatur ex minima? Repudiandae eius est voluptates? Nihil quisquam quas molestias provident. Esse, placeat aliquid mollitia alias blanditiis architecto consequatur, ad repellat repudiandae, obcaecati quaerat ipsam ratione temporibus saepe veniam nisi amet debitis id officia veritatis! Enim, natus sit nihil neque minima consectetur. Culpa adipisci earum quidem distinctio totam facere, dolor expedita, placeat ea quo tempore cupiditate dolorem voluptatum architecto explicabo assumenda esse labore, iste corporis nisi! Hic vel similique dolores, in vero blanditiis ex perspiciatis earum quisquam quo ad dolorem deleniti sint, qui aspernatur repellat laborum quam doloremque possimus totam rerum! Neque, illo dicta! Aut, vero? Omnis autem veniam libero illum animi facilis? Maiores dolore ea delectus aut ipsa quibusdam, ad voluptates architecto nostrum. Soluta itaque reiciendis eligendi.</p>
                 </div>
-                <div class="card">
+                <div class="card" id="centerCard">
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nisi provident saepe non dolorem odio sunt necessitatibus nemo pariatur qui, quo, iste perferendis magni eum ut. Quis, consequatur ratione. Sunt, illum.</p>
                 </div>
-                <div class="card">
+                <div class="card" id="rightCard">
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Qui, vero nisi. At illum perspiciatis, odit quasi delectus, a rerum, aliquid voluptate aperiam facere facilis quibusdam aspernatur voluptatum. Vel ipsam voluptatum ratione nihil excepturi fuga reprehenderit iusto nam repellendus quibusdam? Fuga eum cum reprehenderit nobis obcaecati, nostrum corrupti facere tenetur architecto libero. Vitae, quaerat! Error voluptatem qui distinctio fugiat! Adipisci doloribus sapiente id quasi ducimus veritatis earum expedita repellat accusamus distinctio minus cum quidem soluta, iure suscipit magnam iste in, voluptatum natus dolore delectus aut quisquam! Ullam commodi maiores laborum? Quam vitae blanditiis repellat ipsum! Doloremque quaerat odit pariatur et facilis.</p>
                 </div>    
             </div>
@@ -84,5 +74,6 @@
             integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
             crossorigin="anonymous"
         ></script>
+        <script src="script.js"></script>
     </body>
 </html>
