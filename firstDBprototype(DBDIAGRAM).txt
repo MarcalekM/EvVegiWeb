@@ -2,7 +2,7 @@ Table users {
   id integer [primary key]
   username varchar [unique, not null]
   password_hash varchar [not null]
-  role varchar [default: 'player']         
+  role varchar [default: 'player']     //másik lehetődég: admin     
   highest_score integer [default: 0]       
   created_at timestamp
   profile_image_url varchar                 
