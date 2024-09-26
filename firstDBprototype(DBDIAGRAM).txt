@@ -1,0 +1,44 @@
+Table users {
+  id integer [primary key]
+  username varchar [unique, not null]
+  password_hash varchar [not null]
+  role varchar [default: 'player']         
+  highest_score integer [default: 0]       
+  created_at timestamp
+  profile_image_url varchar                 
+}
+
+Table rounds {
+  id integer [primary key]
+  user_id integer
+  score integer [not null]
+  match_date timestamp
+}
+
+Table leaderboard {
+  user_id integer
+  username varchar
+  highest_score integer
+}
+
+Table friends {
+  id integer [primary key]
+  user_id integer
+  friend_id integer
+  created_at timestamp
+}
+
+Table messages {
+  id integer [primary key]
+  sender_id integer
+  receiver_id integer
+  message_text text
+  sent_at timestamp
+}
+
+Ref: rounds.user_id > users.id
+Ref: leaderboard.user_id > users.id
+Ref: friends.user_id > users.id
+Ref: friends.friend_id > users.id
+Ref: messages.sender_id > users.id
+Ref: messages.receiver_id > users.id
