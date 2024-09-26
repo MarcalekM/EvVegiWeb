@@ -19,20 +19,22 @@ body {
 
 .container {
     height: 850px;
-    width: fit-content;
-    background-color: #331D2C;
+    width: 90%;
+    background-color: /*#331D2C*/ black;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
     overflow: hidden;
+    position: relative;
 }
 
-.card {
+.container .card {
     width: 30%;
-    max-height: 85%;
+    height: 650px;
     margin: 4% 0;
     background-color: #3F2E3E;
+    position: absolute;
 }
 
 .card p {
@@ -41,28 +43,26 @@ body {
     padding: 10px;
     margin: auto;
     text-align: justify;
-    background-color: #3F2E3E;
     color: #EFE1D1;
     border-radius: 3%;
     /*overflow: scroll;*/
 }
 
 #centerCard {
-    position: relative;
     animation-name: tryC;
     animation-duration: 4s;
     animation-delay: 1s;
 }
 
 #leftCard {
-    position: relative;
+    left: 25px;
     animation-name: tryL;
     animation-duration: 4s;
     animation-delay: 1s;
 }
 
 #rightCard {
-    position: relative;
+    right: 25px;
     animation-name: tryR;
     animation-duration: 4s;
     animation-delay: 1s;

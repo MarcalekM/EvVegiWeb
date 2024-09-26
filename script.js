@@ -3,21 +3,23 @@ function CardChange(){
     const cardL = document.getElementById("leftCard");
     const cardC = document.getElementById("centerCard");
     const cardR = document.getElementById("rightCard");
-    let pos = 0;
-    let anim = setInterval(animateOut(), 1000);
+    let posC = 0;
+    let posO = 25;
+    let anim = setInterval(animateOut(), 2);
 
 
     function animateOut(){
-        if(pos == -450){
+        if(posC == -450){
             clearInterval(anim);
         }
         else {
-            console.log(pos);
-            pos--;
-            cardL.style.left = pos + "px";
-            cardR.style.right = pos + "px";
-            cardC.style.top = pos * 2 + "px";
-            console.log(pos);
+            posC--;
+            posO--;
+            console.log(posC);
+            cardL.style.left = posO + "px";
+            cardR.style.right = posO + "px";
+            cardC.style.top = posC * 2 + "px";
+            console.log(posC);  
         }
     }
 
