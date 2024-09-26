@@ -1,7 +1,7 @@
 function CardChange(event){
-    const btn = event.target;
+    const btn = event.target.innerHTML;
     let anim1 = null;
-    let anime2 = null;
+    let anim2 = null;
     const cardL = document.getElementById("leftCard");
     const cardC = document.getElementById("centerCard");
     const cardR = document.getElementById("rightCard");
@@ -12,7 +12,21 @@ function CardChange(event){
             clearInterval(anim1);
 
             switch(btn){
-
+                case "Home":
+                    document.getElementById("leftCard").innerHTML = "<p>Ez a Home leftCard</p>";
+                    document.getElementById("centerCard").innerHTML = "<p>Ez a Home centerCard</p>";
+                    document.getElementById("rightCard").innerHTML = "<p>Ez a Home rightCard</p>";
+                    break;
+                case "Leaderboard":
+                    document.getElementById("leftCard").innerHTML = "<p>Ez a Leaderboard leftCard</p>";
+                    document.getElementById("centerCard").innerHTML = "<p>Ez a Leaderboard centerCard</p>";
+                    document.getElementById("rightCard").innerHTML = "<p>Ez a Leaderboard rightCard</p>";
+                    break;
+                case "About us":
+                    document.getElementById("leftCard").innerHTML = "<p>Ez a About us leftCard</p>";
+                    document.getElementById("centerCard").innerHTML = "<p>Ez a About us centerCard</p>";
+                    document.getElementById("rightCard").innerHTML = "<p>Ez a About us rightCard</p>";
+                    break;
             }
 
             anim2 = setInterval(function animateIn(){
